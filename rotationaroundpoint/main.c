@@ -41,6 +41,7 @@ GLuint compile_shader(const char* file, GLenum type)
  * cem yuksel(he is extremely cool professor although i prefer books and research papers more but 
  * please watch his all lectures you will not regret it) also explained it https://youtu.be/EKN7dTJ4ep8?si=cIYeaIUQX6cLoWku
  * keenan crane is also extremely good professor he explains most complex concepts in so simple way that you think you already know it https://www.youtube.com/watch?v=QmFBHSJS0Gw&list=PL9_jI1bdZmz2emSh0UQ5iOdT2xRHFHL7E&index=6
+ * extremely underrated but very awesome series on computer graphics professors puts efforts to make you visualise  https://www.youtube.com/watch?v=bW9goiYaOBs&list=PLxGzv4uunL64DRA5DXKuUSJ0hIEbBU7w8&index=26
  * Rotation about point p: T(p) * Rz(φ) * T(-p)
  *   where T(v) = translation matrix by vector v
  *         Rz(φ) = rotation matrix about z-axis by angle φ
@@ -53,7 +54,7 @@ GLuint compile_shader(const char* file, GLenum type)
  * Matrix composition: X = T(p) × Rz(φ) × T(-p)  rotate around point p using homogeneous transforms
  * matrix rotations like glm_rotate_z() always rotate around the origin (0,0,0).
 
- *So, to rotate around point p, you must temporarily shift p to the origin, do the rotation there, and then shift back.
+ *So, to rotate around point p, you must temporarily shift p to the origin because rotation keeps origin fixed, do the rotation there, and then shift back.
  */
 
 void rotate_around_point(float angle_rad, vec3 p, mat4 out_transform)
